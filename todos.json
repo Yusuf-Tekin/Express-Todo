@@ -1,0 +1,26 @@
+{
+  "lists": [
+    {
+      "listName": "Alışveriş",
+      "id": 1
+    },
+    {
+      "listName": "Yapılacaklar",
+      "id": 2
+    }
+  ],
+  "todos": [
+    {
+      "isStar": true,
+      "todo": "Domates alınacak.",
+      "listId": 1,
+      "id": 1
+    },
+    {
+      "todo": "Salatalık alınacak.",
+      "listId": 1,
+      "isStar": false,
+      "id": 2
+    }
+  ]
+}

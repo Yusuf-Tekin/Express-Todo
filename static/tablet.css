@@ -1,0 +1,9 @@
+section .lists{
+    width: 100%;
+}
+section .center .todos{
+    width: 45%;
+}
+section .center .newTodo{
+    width: 45%;
+}

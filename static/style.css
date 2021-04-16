@@ -1,0 +1,294 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+
+*{
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e6e9eb;
+}
+
+header{
+    height: 15vh;
+}
+header nav{
+    background-color: #EFEFF5;
+    padding: 20px 20px;
+}
+header nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+header nav ul li{
+    font-size: 21px;
+}
+
+header nav ul li.icons{
+    display: flex;
+}
+header nav ul .icons div{
+    margin: 0px 10px;
+    cursor: pointer;
+    color: #546C7C;
+    position: relative;
+    
+
+}
+header nav ul .icons .notification .badge{
+    font-family: sans-serif;
+    position: absolute;
+    font-size: 11px;
+    top: 0;
+    left: 10px;
+    color: white;
+    background-color: #713CEF;
+    padding: 1px 5px;
+    border-radius: 100%;
+}
+header nav ul .user-info{
+    display: flex;
+    align-items: center;
+}
+header nav ul .user-info div{
+    margin: 0px 5px;
+}
+header nav ul .user-info .user-image{
+    background-color: #C4ACFC;
+    padding: 4px 6px;
+    border-radius: 100%;
+    color: white;
+}
+header nav ul .user-info .user-image i{
+    position: relative;
+    top: 1px;
+}
+header nav ul .user-info .user-name{
+    font-family: 'Montserrat', sans-serif;
+    
+}
+header nav ul .user-info .user-name a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+header nav ul .user-info .user-name .bottom-icon{
+    font-size: 14px;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 85vh;
+}
+
+
+
+section .top{
+    display: flex !important;
+    justify-content: space-evenly !important;
+    align-items: center;
+    padding-top: 40px;
+}
+
+section .top .list-name{
+    font-size: 32px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+section .top .order-icons{
+    font-size: 19px;
+}
+section .top .order-icons span{
+    margin: 0px 6px;
+    cursor: pointer;
+    color: #713CEF;
+}
+
+
+section .center{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+section .lists{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
+}
+
+section .card{
+    background-color: #EFEFF5;
+    padding: 40px 40px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px 10px;
+    position: relative;
+    opacity: 1;
+}
+section .card .elements{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section .card .elements .icon{
+    font-size: 20px;
+    opacity: 0.78;
+}
+
+section .card .elements .list-name{
+    font-family: 'Heebo', sans-serif;
+    margin-top: 10px;
+    font-weight: 400;
+    overflow: hidden;
+}
+
+section .card .elements .list-items{
+    font-family: 'Heebo', sans-serif;
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+section .center .lists .card .go{
+    font-size: 21px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+section .center .lists .card .go a{
+    color: #713CEF;
+}
+
+
+
+section .center .todos{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+section .center .todos .todosCard{
+    margin: 5px 0px;
+    padding: 10px 20px;
+    width: 100%;
+    font-family: 'Heebo', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+}
+section .center .todos .todosCard .todosCard-title{
+    overflow: hidden;
+}
+section .center .todos .todosCard .todosCard-icon{
+    cursor: pointer;
+    color: #e3c815;
+}
+
+section .center .todos .todosCard .todosCard-icon .deleteTodo{
+    color: white;
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    border-radius: 100%;
+    padding: 1px 4px;
+    background-color: #d9534f;
+}
+section .center .todos .todosCard .todosCard-icon .deleteTodo i{
+    position: relative;
+    top: 1px;
+}
+
+
+section .center .newTodo{
+    position: absolute;
+    bottom: 10px;
+    width: 25%;
+}
+section .center .newTodo .textInput .todotitle{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 40px;
+    font-size: 13px;
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #C4ACFC;
+    width: 100%;
+    color: #6c6d7a;
+    overflow: hidden;
+
+}
+section .center .newTodo .textInput  i{
+    font-size: 32px;
+    position: absolute;
+    left: 4px;
+    bottom: -3px;
+    color: #6c6d7a;
+}
+
+section .center .newTodo .todosubmit{
+    border: none;
+    background: none;
+    font-size: 26px;
+    font-family: 'Heebo', sans-serif;
+    color: #713CEF;
+    font-weight: bold;
+    position: absolute;
+    top: -3px;
+    right: 0px;
+    cursor: pointer;
+}
+
+
+section .center .lists .card .deleteIcon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: -6px -3px;
+    background-color: #d9534f ;
+    color: white;
+    padding: 6px 7px;
+    border-radius: 100%;
+}
+section .center .lists .card .deleteIcon i{
+    font-size: 14px;
+    position: relative;
+    top: -1px;
+}
+
+
+
+section .AddButton {
+    position: relative;
+}
+section .AddButton .addButton{
+    position: fixed;
+    top: 12%;
+    right: 0;
+    padding: 5px 5px;
+    border: none;
+    background: #713CEF;
+    font-size: 48px;
+    cursor: pointer;
+    color: white;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    box-shadow: 3px 2px 8px gray;
+}

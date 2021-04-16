@@ -1,0 +1,81 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/style.css")
+        link(rel="stylesheet", href="/tablet.css", media="(max-width:1131px)")
+        link(rel="stylesheet", href="/mobile.css", media="(max-width:500px)")
+        link(rel="stylesheet", href="/alertify.css")
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+        title Todo Detay
+    body 
+    - /// Burası Menü kısmı
+
+        header 
+            nav 
+                ul 
+                    li.user-info 
+                        div.user-image 
+                            <i class="bi bi-card-image"></i>
+                            
+                        div.user-name 
+                            a(href="http://localhost:5000") App
+                            span.bottom-icon <i class="bi bi-chevron-down"></i>
+
+                    li.icons
+                        div.notification(title = "Bildirimler")
+                            <i class="bi bi-bell-fill"></i>
+                            span.badge 2
+                        
+                        div.messages(title = "Mesajlar") <i class="bi bi-chat-fill"></i>
+
+
+
+        - /// Burası Ana kısmı
+        section 
+            div.top
+                div.list-name
+                    span=`${listName}`
+                    span (
+                    span#size=`${todos.length}`
+                    span &nbsp;Görev)
+                div.order-icons
+                    span.icon-1(title= "Row") 
+                        <i class="bi bi-grid-fill"></i>
+                    span.icon-2(title= "List")
+                        <i class="bi bi-list-check"></i>
+            div.center
+                div.todos
+                    div.newTodos
+                    each todo in todos.reverse()
+                        
+                        div.todosCard
+                            div.todosCard-title(id = todo.listId)
+                                span=todo.todo
+
+                            div.todosCard-icon
+                                if todo.isStar == true          
+                                    i.bi.bi-star-fill(title= "Yıldızlama" id = todo.id)
+                                else 
+                                    i.bi.bi-star(title= "Yıldızla" id = todo.id)
+                                
+                                span.deleteTodo
+                                    i.bi.bi-trash-fill.delete(title ="Sil" id = todo.id)
+
+                span.newTodo
+                    form()
+                        div.textInput
+                            input#NewTodoNameInput(type="text" autocomplete = "off" class="todotitle" placeholder = "Yeni Görev Ekle")
+                            <i class="bi bi-plus"></i>
+                        button.todosubmit(type="submit" title= "Ekle" id = listid) <i class="bi bi-plus-circle-fill"></i> 
+
+            
+        
+        script(src="/alertify.min.js")
+        script(src="/UI.js") 
+                
+
+
+        

@@ -1,0 +1,15 @@
+section .AddButton .addButton{
+    font-size: 28px;
+}
+
+section .center .todos{
+    width: 75%;
+}
+
+section .top .list-name{
+    font-size: 21px;
+}
+
+section .center .newTodo{
+    width: 85%;
+}
